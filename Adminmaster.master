@@ -1,0 +1,116 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Adminmaster.master.cs" Inherits="Adminmaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Admin Home</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+            width: 100%;
+        }
+        .style2
+        {
+            height: 23px;
+             width: 830px;
+        }
+        .style3
+        {
+            height: 23px;
+            width: 200px;
+        }
+        .style4
+        {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        
+        <table class="style1">
+            <tr>
+                <td colspan="2" style="text-align: left">
+                    <asp:Image ID="Image1" runat="server" Height="204px" BorderWidth="3px" ImageAlign="AbsMiddle"  
+                               BorderColor="Black" BorderStyle="Solid" style="text-align: center"
+                        ImageUrl="~/IMAGES/title.png" Width="1320px" />
+                        <asp:Menu ID="Menu1" runat="server" BackColor="Black" BorderColor="Red" 
+                        BorderStyle="Solid" BorderWidth="2px" Height="25px" Orientation="Horizontal" 
+                        Width="1002px">
+                        <StaticMenuItemStyle BackColor="Black" Font-Bold="True" Font-Italic="True" 
+                            Font-Size="X-Large" ForeColor="Aqua" />
+                        <StaticHoverStyle BackColor="Black" BorderColor="Aqua" BorderStyle="Outset" 
+                            BorderWidth="3px" ForeColor="#FF0066" />
+                        <Items>
+                            <asp:MenuItem Text="Home" ToolTip="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Company" ToolTip="Company" Value="Company" 
+                                NavigateUrl="~/ClientCompany.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ClientAccessories.aspx" Text="Accessories" 
+                                Value="Accessoriess"></asp:MenuItem>
+                            <asp:MenuItem Text="Login" ToolTip="Login" Value="Login" 
+                                NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Contact Us" ToolTip="Contact Us" Value="Contact Us" 
+                                NavigateUrl="~/Contact.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="About Us" ToolTip="About Us" Value="About Us" 
+                                NavigateUrl="~/Aboutus.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Terms &amp; Condition" ToolTip="Terms &amp; Condition" 
+                                Value="Terms &amp; Condition" NavigateUrl="~/Terms.aspx"></asp:MenuItem>
+                            
+                        </Items>
+                    </asp:Menu>
+                </td>
+            </tr>
+            <tr>
+                <td class="style3" style="position: absolute">
+                <asp:Menu ID="Menu2" runat="server" Height="208px" 
+                        Width="160px">
+                        <StaticMenuItemStyle Font-Bold="True" Font-Italic="True" 
+                            Font-Size="X-Large" ForeColor="Maroon" />
+                        <StaticHoverStyle ForeColor="Red" />
+                        <Items>
+                            <asp:MenuItem Text="Admin Home" ToolTip="Admin Home" Value="Admin Home" 
+                                NavigateUrl="~/Adminhome.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Company" ToolTip="Company" Value="Company" 
+                                NavigateUrl="~/AdminCompany.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Product" ToolTip="Product" Value="Product" 
+                                NavigateUrl="~/Adminproduct.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Change Password" ToolTip="Change Password" 
+                                Value="Change Password" NavigateUrl="~/changepassword.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminCustInfo.aspx" Text="Customer Detail" 
+                                Value="Customer information"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminViewCart.aspx" Text="Product Detail" 
+                                Value="Customer Transaction"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AdminAccessories.aspx" Text="Accessories" 
+                                Value="Accessories"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+                <td class="style2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <div class="style4">
+                        </div>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <asp:Label ID="Label1" runat="server" BackColor="Black" BorderColor="Red" 
+                        BorderStyle="Solid" BorderWidth="3px" Font-Bold="True" Font-Italic="True" 
+                        Font-Size="X-Large" ForeColor="Aqua" Height="28px" 
+                        Text="© 2017-2018  Hi-Mobie.Com (India) Pvt. Ltd. All Rights Reserved.           " 
+                        Width="996px"></asp:Label>
+                    </td>
+            </tr>
+        </table>
+        
+    </div>
+    </form>
+</body>
+</html>

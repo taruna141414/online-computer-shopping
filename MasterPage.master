@@ -1,0 +1,170 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Online Computer Shopping</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <style type="text/css">
+        .style1
+        {
+        }
+        .style2
+        {
+            width: 93%;
+        }
+        .style3
+        {
+            text-align: left;
+        }
+        .style4
+        {
+            width: 830px;
+            text-align: left;
+        }
+        .style5
+        {
+            text-align: left;
+            position:absolute;
+        }
+        .style7
+        {
+            margin-left: 0px;
+        }
+        .style8
+        {
+            text-align: left;
+            height: 30px;
+        }
+    </style>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="style1">
+        
+        
+        <table class="style2">
+            <tr>
+                <td class="style3" colspan="2">
+                    <asp:Image ID="Image1" runat="server" BorderColor="Black" BorderStyle="Solid" 
+                        BorderWidth="3px" Height="204px" ImageAlign="AbsMiddle" 
+                        ImageUrl="~/IMAGES/title.png" Width="1320px" 
+                        style="text-align: center" />
+                    
+                    <div class="style3">
+                    
+                    <asp:Menu ID="Menu1" runat="server" BackColor="Black" BorderColor="Red" 
+                        BorderStyle="Solid" BorderWidth="2px" Height="25px" Orientation="Horizontal" 
+                        Width="1002px">
+                        <StaticMenuItemStyle BackColor="Black" Font-Bold="True" Font-Italic="True" 
+                            Font-Size="X-Large" ForeColor="Aqua" />
+                        <StaticHoverStyle BackColor="Black" BorderColor="Aqua" BorderStyle="Outset" 
+                            BorderWidth="3px" ForeColor="#FF0066" />
+                        <Items>
+                            <asp:MenuItem Text="Home" ToolTip="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Company" ToolTip="Company" Value="Company" 
+                                NavigateUrl="~/ClientCompany.aspx"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ClientAccessories.aspx" Text="Accessories" 
+                                Value="Accessoriess"></asp:MenuItem>
+                            <asp:MenuItem Text="Login" ToolTip="Login" Value="Login" 
+                                NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Contact Us" ToolTip="Contact Us" Value="Contact Us" 
+                                NavigateUrl="~/Contact.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="About Us" ToolTip="About Us" Value="About Us" 
+                                NavigateUrl="~/Aboutus.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Terms &amp; Condition" ToolTip="Terms &amp; Condition" 
+                                Value="Terms &amp; Condition" NavigateUrl="~/Terms.aspx"></asp:MenuItem>
+                            
+                            <asp:MenuItem Text="FeedBack" ToolTip="FeedBack" Value="FeedBack" 
+                                NavigateUrl="~/FeedBack.aspx">
+                            </asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="style8" colspan="2">
+                    &nbsp;<%--<asp:LinkButton ID="LinkButton1" runat="server" Font-Bold="True"  Font-Italic="True" Font-Size="Medium" ForeColor="Red" 
+                   Visible="false" PostBackUrl="~/Viewcart.aspx">View Cart</asp:LinkButton>--%>
+                    
+                    <%--<asp:LinkButton ID="LinkButton2" runat="server" Font-Bold="True" 
+                        Font-Italic="True" Font-Size="Medium" ForeColor="Red" 
+                        onclick="LinkButton2_Click" Visible="False">LogOut</asp:LinkButton>  --%>
+                        <asp:LinkButton runat="server" ID="LinkButton1" PostBackUrl="~/Viewcart.aspx">View Cart </asp:LinkButton>
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <asp:LinkButton runat="server" ID="LinkButton2" 
+                        onclick="LinkButton2_Click1">LogOut</asp:LinkButton>
+                        <asp:LinkButton runat="server" ID="link"></asp:LinkButton>
+                    <span lang="en-us">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:Label 
+                        ID="Label2" runat="server" Text="Search Range" Font-Bold="True" 
+                        Font-Size="Medium" ForeColor="Red"></asp:Label>
+                    &nbsp;<asp:TextBox ID="TextBox1" runat="server" Width="65px" MaxLength="5"></asp:TextBox>
+                    &nbsp;
+                    <asp:TextBox ID="TextBox2" runat="server" Width="65px" MaxLength="5"></asp:TextBox>
+                    &nbsp;&nbsp;<asp:Button ID="Button1" runat="server" Text="Search" onclick="Button1_Click" 
+                        BorderColor="#009900" BorderStyle="Outset" Font-Bold="True" Font-Size="Medium" 
+                        ForeColor="#990000" Width="67px" />
+                    &nbsp;<asp:RegularExpressionValidator ID="RegularExpressionValidator1" 
+                        runat="server" ControlToValidate="TextBox1" ErrorMessage="Plz Enter Number" 
+                        ValidationExpression="[0-9]*"></asp:RegularExpressionValidator>
+                    &nbsp;<asp:RegularExpressionValidator ID="RegularExpressionValidator2" 
+                        runat="server" ControlToValidate="TextBox2" ErrorMessage="Plz enter Number" 
+                        ValidationExpression="[0-9]*"></asp:RegularExpressionValidator>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="style5">
+                    <asp:Menu ID="Menu2" runat="server" Height="208px" 
+                        Width="160px">
+                        <StaticMenuItemStyle Font-Bold="True" Font-Italic="True" 
+                            Font-Size="X-Large" ForeColor="Maroon" />
+                        <StaticHoverStyle ForeColor="Red" />
+                        <Items>
+                            <asp:MenuItem Text="Home" ToolTip="Home" Value="Home" NavigateUrl="~/Home.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Company" ToolTip="Company" Value="Company" 
+                                NavigateUrl="~/ClientCompany.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Login" ToolTip="Login" Value="Login" 
+                                NavigateUrl="~/Login.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Contact Us" ToolTip="Contact Us" Value="Contact Us" 
+                                NavigateUrl="~/Contact.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="About Us" ToolTip="About Us" Value="About Us" 
+                                NavigateUrl="~/Aboutus.aspx">
+                            </asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/ClientAccessories.aspx" Text="Accessories" 
+                                Value="Accessories"></asp:MenuItem>
+                        </Items>
+                    </asp:Menu>
+                </td>
+                <td class="style4">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        <div class="style3">
+                        </div>
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="style3" colspan="2">
+                    <asp:Label ID="Label1" runat="server" BackColor="Black" BorderColor="Red" 
+                        BorderStyle="Solid" BorderWidth="3px" Font-Bold="True" Font-Italic="True" 
+                        Font-Size="X-Large" ForeColor="Aqua" Height="28px" 
+                        Text=" © 2017-2018  Hi-Mobie.Com (India) Pvt. Ltd. All Rights Reserved." 
+                        Width="998px" CssClass="style7"></asp:Label>
+                </td>
+            </tr>
+        </table>
+        
+        
+    </div>
+    </form>
+</body>
+</html>
